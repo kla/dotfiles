@@ -20,3 +20,6 @@ alias gcrb='git checkout --track -b'
 alias gd='git diff'
 
 alias rbe-bundle='gem bundle --only development --only test --build-options config/development/gemfile_build_options.yml'
+
+alias r1.8='rvm use ruby-1.8.7-p249'
+alias r1.9='rvm use ruby-1.9.1-p376'
