@@ -8,6 +8,14 @@ else
   export LS_COLORS='no=00:fi=00:di=00;36:ln=00;35:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;31:'
 fi
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
+fi
+
 alias ll='ls -l'
 alias la='ls -lA'
 alias l='ls -CF'
@@ -17,9 +25,7 @@ alias gpr='git pull --rebase'
 alias gs='git status'
 alias gl='git log'
 alias gcrb='git checkout --track -b'
-alias gd='git diff'
+alias gd='git diff --color-words'
 
-alias rbe-bundle='gem bundle --only development --only test --build-options config/development/gemfile_build_options.yml'
-
-alias r1.8='rvm use ruby-1.8.7-p249'
-alias r1.9='rvm use ruby-1.9.1-p376'
+alias r1.8='rvm use ruby-1.8.7'
+alias r1.9='rvm use ruby-1.9.1'
