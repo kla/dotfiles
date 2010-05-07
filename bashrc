@@ -50,3 +50,5 @@ fi
 if [[ -s ~/.rvm/scripts/rvm ]]; then
   . ~/.rvm/scripts/rvm
 fi
+
+export EDITOR=/usr/bin/vim
