@@ -6,4 +6,18 @@ set smartindent
 set incsearch
 set hlsearch
 
+" disable file backups
+set nobackup
+set nowb
+set noswapfile
+
 colorscheme slate
+
+" reload when .vimrc is saved
+autocmd! bufwritepost ~/.vimrc source ~/.vimrc
+autocmd! bufwritepost vimrc source vimrc
+
+nnoremap <C-]> :bnext<CR>
+nnoremap <C-[> :bprev<CR>
+nnoremap <C-w> :bd<CR>
+nnoremap <C-Tab> :b#<CR>

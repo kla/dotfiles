@@ -27,10 +27,6 @@ elseif has("gui_gtk2")
   nnoremap <A-e> :NERDTreeToggle<CR>
   nnoremap <A-t> :FuzzyFinderTextMate<CR>
 
-  nnoremap <C-]> :bnext<CR>
-  nnoremap <C-[> :bprev<CR>
-  nnoremap <C-w> :bd<CR>
-
 elseif has("x11")
 elseif has("gui_win32")
 end
