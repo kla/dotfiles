@@ -20,6 +20,7 @@ alias ll='ls -l'
 alias la='ls -lA'
 alias l='ls -CF'
 
+# git
 alias gca='git commit -a'
 alias gpr='git pull --rebase'
 alias gs='git status'
@@ -27,5 +28,9 @@ alias gl='git log'
 alias gcrb='git checkout --track -b'
 alias gd='git diff --color-words'
 
+# rvm
 alias r1.8='rvm use ruby-1.8.7'
 alias r1.9='rvm use ruby-1.9.1'
+
+# passenger restart alias if current directory looks like a rails app
+alias pr='if [ -x ./public ] && [ -x ./app ] && [ -x ./tmp ]; then touch tmp/restart.txt; fi'
