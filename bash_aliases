@@ -21,6 +21,8 @@ alias la='ls -lA'
 alias l='ls -CF'
 
 # git
+alias gb='git branch'
+alias gco='git checkout'
 alias gca='git commit -a'
 alias gpr='git pull --rebase'
 alias gs='git status'
