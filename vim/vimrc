@@ -1,4 +1,5 @@
 set tabstop=2
+set shiftwidth=2
 set showmatch
 set autoindent
 set copyindent
@@ -16,6 +17,8 @@ colorscheme slate
 " reload when .vimrc is saved
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 autocmd! bufwritepost vimrc source vimrc
+
+autocmd FileType ruby setl expandtab
 
 nnoremap <C-w> :bd<CR>
 nnoremap <C-Tab> :b#<CR>
