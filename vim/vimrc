@@ -17,7 +17,8 @@ colorscheme slate
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 autocmd! bufwritepost vimrc source vimrc
 
-nnoremap <C-]> :bnext<CR>
-nnoremap <C-[> :bprev<CR>
 nnoremap <C-w> :bd<CR>
 nnoremap <C-Tab> :b#<CR>
+nnoremap <C-t> :tabnew<CR>
+nnoremap <A-1> :tabprev<CR>
+nnoremap <A-2> :tabnext<CR>

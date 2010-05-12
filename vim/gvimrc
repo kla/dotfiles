@@ -31,7 +31,8 @@ elseif has("x11")
 elseif has("gui_win32")
 end
 
-set anti " Antialias font
+" Antialias font
+set anti
 
 " Default size of window
 set columns=170
