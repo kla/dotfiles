@@ -12,7 +12,7 @@ set nobackup
 set nowb
 set noswapfile
 
-colorscheme slate
+colorscheme rdark
 
 " reload when .vimrc is saved
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
