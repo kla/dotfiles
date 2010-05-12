@@ -19,6 +19,7 @@ autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 autocmd! bufwritepost vimrc source vimrc
 
 autocmd FileType ruby setl expandtab
+autocmd FileType haml setl expandtab
 
 nnoremap <C-w> :bd<CR>
 nnoremap <C-Tab> :b#<CR>
