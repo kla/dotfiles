@@ -21,6 +21,8 @@ autocmd! bufwritepost vimrc source vimrc
 autocmd FileType ruby setl expandtab
 autocmd FileType haml setl expandtab
 
+autocmd BufNewFile,BufRead Gemfile set filetype=ruby
+
 nnoremap <C-w> :bd<CR>
 nnoremap <C-Tab> :b#<CR>
 nnoremap <C-t> :tabnew<CR>
