@@ -1,3 +1,6 @@
 [user]
 	email = la.kien@gmail.com
 	name = Kien La
+[branch "master"]
+  remote = origin
+  merge = refs/heads/master
