@@ -39,16 +39,16 @@ xterm*|rxvt*)
     ;;
 esac
 
+if [ -f /etc/profile ]; then
+	. /etc/profile
+fi
+
 if [ -f /etc/bashrc ]; then
   . /etc/bashrc
 fi
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
-fi
-
-if [[ -s ~/.rvm/scripts/rvm ]]; then
-  . ~/.rvm/scripts/rvm
 fi
 
 export EDITOR=/usr/bin/vim

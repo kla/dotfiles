@@ -2,12 +2,14 @@ set tabstop=2
 set shiftwidth=2
 set showmatch
 set autoindent
-set copyindent
+"set copyindent
+set backspace=2
 set smartindent
+set smarttab
 set incsearch
 set hlsearch
 set ruler
-set number
+"set number
 set laststatus=2
 
 " disable file backups
@@ -23,7 +25,9 @@ autocmd! bufwritepost vimrc source vimrc
 
 autocmd FileType ruby setl expandtab
 autocmd FileType haml setl expandtab
+autocmd FileType sass setl expandtab
 
+autocmd BufNewFile,BufRead *.sass set filetype=sass
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 nnoremap <C-w> :bd<CR>
