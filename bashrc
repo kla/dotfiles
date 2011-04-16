@@ -52,3 +52,4 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 export EDITOR=/usr/bin/vim
+export DISABLE_CENTRAL_LOGGER=true

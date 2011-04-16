@@ -1,3 +1,5 @@
+call pathogen#runtime_append_all_bundles()
+
 set tabstop=2
 set shiftwidth=2
 set showmatch
@@ -26,8 +28,12 @@ autocmd! bufwritepost vimrc source vimrc
 autocmd FileType ruby setl expandtab
 autocmd FileType haml setl expandtab
 autocmd FileType sass setl expandtab
+autocmd FileType scss setl expandtab
+autocmd FileType coffee setl expandtab
 
 autocmd BufNewFile,BufRead *.sass set filetype=sass
+autocmd BufNewFile,BufRead *.scss set filetype=scss
+autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
 nnoremap <C-w> :bd<CR>
@@ -35,3 +41,4 @@ nnoremap <C-Tab> :b#<CR>
 nnoremap <C-t> :tabnew<CR>
 nnoremap <A-1> :tabprev<CR>
 nnoremap <A-2> :tabnext<CR>
+
