@@ -1,3 +1,11 @@
+if [ -f /etc/profile ]; then
+	. /etc/profile
+fi
+
+if [ -f /etc/bashrc ]; then
+  . /etc/bashrc
+fi
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -23,10 +31,15 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+function parse_git_branch {
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+    echo "("${ref#refs/heads/}")"
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='\[\033[01;35m\][\T] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="\[\033[01;35m\][\T] ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;30m\]\$(parse_git_branch)\[\033[00m\]\$ "
 else
-    PS1='[\T] ${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='[\T] ${debian_chroot:+($debian_chroot)}\u@\h:\w\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -38,14 +51,6 @@ xterm*|rxvt*)
 *)
     ;;
 esac
-
-if [ -f /etc/profile ]; then
-	. /etc/profile
-fi
-
-if [ -f /etc/bashrc ]; then
-  . /etc/bashrc
-fi
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
