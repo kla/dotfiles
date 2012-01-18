@@ -27,12 +27,16 @@ autocmd! bufwritepost vimrc source vimrc
 
 autocmd FileType ruby setl expandtab
 autocmd FileType haml setl expandtab
+autocmd FileType jade setl expandtab
 autocmd FileType sass setl expandtab
 autocmd FileType scss setl expandtab
+autocmd FileType html setl expandtab
 autocmd FileType coffee setl expandtab
 
+autocmd BufNewFile,BufRead *.jade set filetype=haml
 autocmd BufNewFile,BufRead *.sass set filetype=sass
 autocmd BufNewFile,BufRead *.scss set filetype=scss
+autocmd BufNewFile,BufRead *.less set filetype=scss
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead Gemfile set filetype=ruby
 
