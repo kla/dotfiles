@@ -30,6 +30,7 @@ alias gs='git status'
 alias gl='git log'
 alias gcrb='git checkout --track -b'
 alias gd='git diff --color-words'
+alias gg='git grep'
 
 # rubies
 alias ree='rvm use ree'
