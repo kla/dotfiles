@@ -6,3 +6,4 @@
   merge = refs/heads/master
 [core]
   excludesfile = ~/.gitignore
+  editor = vim
